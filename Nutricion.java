@@ -46,7 +46,7 @@ public class Nutricion {
             lista.add(new Ingrediente(nombre, cal, prot, grasa, carb));
 
             System.out.print("¿Desea agregar otro ingrediente? (s/n): ");
-            continuar = sc.next().charAt(0);
+            continuar = EC.next().charAt(0);
 
         } while (continuar == 's' || continuar == 'S');
 
@@ -71,6 +71,6 @@ public class Nutricion {
             System.out.println("Estado nutricional: NO ACEPTABLE");
         }
 
-        sc.close();
+        ce.close();
     }
 }
