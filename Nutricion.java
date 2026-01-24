@@ -21,7 +21,7 @@ public class Nutricion {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner EC = new Scanner(System.in);
         ArrayList<Ingrediente> lista = new ArrayList<>();
         char continuar;
 
@@ -29,19 +29,19 @@ public class Nutricion {
 
         do {
             System.out.print("Ingrediente: ");
-            String nombre = sc.next();
+            String nombre = EC.next();
 
             System.out.print("Calorías: ");
-            double cal = sc.nextDouble();
+            double cal = EC.nextDouble();
 
             System.out.print("Proteínas (g): ");
-            double prot = sc.nextDouble();
+            double prot = EC.nextDouble();
 
             System.out.print("Grasas (g): ");
-            double grasa = sc.nextDouble();
+            double grasa = EC.nextDouble();
 
             System.out.print("Carbohidratos (g): ");
-            double carb = sc.nextDouble();
+            double carb = EC.nextDouble();
 
             lista.add(new Ingrediente(nombre, cal, prot, grasa, carb));
 
