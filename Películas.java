@@ -18,28 +18,28 @@ public class Películas {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner CE = new Scanner(System.in);
         ArrayList<Pelicula> lista = new ArrayList<>();
         char continuar;
 
         System.out.println("=== SISTEMA DE ORDENAMIENTO DE PELÍCULAS ===");
 
         do {
-            sc.nextLine();
+            CE.nextLine();
             System.out.print("Título: ");
             String titulo = sc.nextLine();
 
             System.out.print("Año de lanzamiento: ");
-            int anio = sc.nextInt();
+            int anio = CE.nextInt();
 
             sc.nextLine();
             System.out.print("Género: ");
-            String genero = sc.nextLine();
+            String genero = CE.nextLine();
 
             lista.add(new Pelicula(titulo, anio, genero));
 
             System.out.print("¿Desea agregar otra película? (s/n): ");
-            continuar = sc.next().charAt(0);
+            continuar = CE.next().charAt(0);
 
         } while (continuar == 's' || continuar == 'S');
 
@@ -50,6 +50,6 @@ public class Películas {
             System.out.println(p.año + " - " + p.titulo + " (" + p.genero + ")");
         }
 
-        sc.close();
+        CE.close();
     }
 }
