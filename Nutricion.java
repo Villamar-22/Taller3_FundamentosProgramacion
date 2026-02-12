@@ -21,7 +21,7 @@ public class Nutricion {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner Ec = new Scanner(System.in);
         ArrayList<Ingrediente> lista = new ArrayList<>();
         char continuar;
 
@@ -29,24 +29,24 @@ public class Nutricion {
 
         do {
             System.out.print("Ingrediente: ");
-            String nombre = sc.next();
+            String nombre = Ec.next();
 
             System.out.print("Calorías: ");
-            double cal = sc.nextDouble();
+            double cal = Ec.nextDouble();
 
             System.out.print("Proteínas (g): ");
-            double prot = sc.nextDouble();
+            double prot = Ec.nextDouble();
 
             System.out.print("Grasas (g): ");
-            double grasa = sc.nextDouble();
+            double grasa = Ec.nextDouble();
 
             System.out.print("Carbohidratos (g): ");
-            double carb = sc.nextDouble();
+            double carb = Ec.nextDouble();
 
             lista.add(new Ingrediente(nombre, cal, prot, grasa, carb));
 
             System.out.print("¿Desea agregar otro ingrediente? (s/n): ");
-            continuar = sc.next().charAt(0);
+            continuar = Ec.next().charAt(0);
 
         } while (continuar == 's' || continuar == 'S');
 
@@ -71,6 +71,6 @@ public class Nutricion {
             System.out.println("Estado nutricional: NO ACEPTABLE");
         }
 
-        sc.close();
+        Ec.close();
     }
 }
